@@ -39,7 +39,7 @@ jobs:
       - name: Build Slidev project
         run: |
           cd ./slidevsample
-          npm run build
+          slidev build --base /slidev/ 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
