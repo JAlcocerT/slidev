@@ -22,9 +22,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      NODE_VERSION: 20  # Specify Node.js version for clarity
+      NODE_VERSION: 16
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -32,26 +32,29 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ env.NODE_VERSION }}
-      - name: Install dependencies (Add comment if needed)
-        run: npm install
-      - name: Build Slidev project (Add comment if needed)
-        run: npm run build
-      - name: Upload artifact for deployment
-        uses: actions/upload-pages-artifact@v1  # Explicit version (optional)
+      - name: Install dependencies
+        run: |
+          cd ./slidevsample
+          npm install
+      - name: Build Slidev project
+        run: |
+          cd ./slidevsample
+          npm run build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          path: ./dist
+          path: ./slidevsample/dist
 
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build  # This job depends on the successful completion of 'build' job
+    needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-
 
 # name: Deploy Slidev site to Pages
 
