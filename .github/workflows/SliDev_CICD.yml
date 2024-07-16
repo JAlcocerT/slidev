@@ -1,9 +1,9 @@
 name: Deploy Slidev site to Pages
 
-# on:
-#   push:
-#     branches: ["main"]
-#   workflow_dispatch:
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -37,7 +37,7 @@ jobs:
       - name: Install dependencies and build
         run: |
           npm install
-          npm run build
+          slidev build --base /slidev/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
