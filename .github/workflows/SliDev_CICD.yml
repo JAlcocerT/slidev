@@ -22,7 +22,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      NODE_VERSION: 16  # Specify Node.js version for clarity
+      NODE_VERSION: 20  # Specify Node.js version for clarity
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
