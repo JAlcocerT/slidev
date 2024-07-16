@@ -8,7 +8,7 @@ background: https://cover.sli.dev
 title: Streamlit Multichat PPT
 info: |
   ## Slidev Starter Template
-  Presentation slides for developers.
+  Presentation slides for developers. Now with Github Actions :)
 
   Learn more at [Sli.dev](https://sli.dev)
 # apply unocss classes to the current slide
