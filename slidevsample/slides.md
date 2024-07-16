@@ -8,7 +8,7 @@ background: https://cover.sli.dev
 title: Streamlit Multichat PPT
 info: |
   ## Slidev Starter Template
-  Presentation slides for developers. Now with Github Actions :)
+  Presentation slides for developers.
 
   Learn more at [Sli.dev](https://sli.dev)
 # apply unocss classes to the current slide
@@ -27,7 +27,7 @@ download: true
 
 # Streamlit MultiChat
 
-Chat with multiple LLMs from one App.
+Chat with multiple LLMs from one App. And build PPT's with SliDev with GH Actions.
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
