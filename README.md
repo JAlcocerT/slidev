@@ -1,3 +1,30 @@
+Could not resist to try Slidev:
+
+1. With [MultiChat](https://github.com/JAlcocerT/Streamlit-MultiChat) as github pages
+
+```sh
+#cd demo
+cd slidevsample
+npm install
+npm run dev
+```
+
+2. Containerize SliDev:
+
+```sh
+#docker compose up slidev-dev
+
+docker compose build slidev-prod
+docker compose up slidev-prod
+```
+
+3. To generate AI Driven PPTs
+
+
+> **Forked** from [Slidev](https://github.com/slidevjs/slidev)
+
+---
+
 <br>
 <p align="center">
 <a href="https://sli.dev" target="_blank">
